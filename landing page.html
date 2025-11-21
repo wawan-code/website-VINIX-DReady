@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vinsix D-Ready</title>
+
+<style>
+ 
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(120deg, #4c7fd1, #dfecfb);
+    }
+
+    /* ========== NAVBAR ========== */
+    .navbar {
+        width: 100%;
+        background: #003f9e;
+        padding: 12px 0;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-container {
+        width: 92%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        color: #f6f7f8;
+        font-size: 18px;
+    }
+
+    .nav-logo img {
+        width: 40px;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 28px;
+    }
+
+    .nav-menu a {
+        text-decoration: none;
+        color: #f6f7f8;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .nav-btns {
+        display: flex;
+        gap: 12px;
+    }
+
+    .login-btn {
+        color: #f6f7f8;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .register-btn {
+        padding: 7px 15px;
+        background: #006cff;
+        color: white;
+        border-radius: 15px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    @media(max-width:750px){
+        .nav-menu { display:none; }
+    }
+
+    /* ========== HERO ========== */
+    .hero-section {
+        width: 92%;
+        max-width: 1200px;
+        margin: 25px auto;
+        background: linear-gradient(to right, #9cc7ff, #b6d5ff, #d8e7ff);
+        padding: 45px;
+        border-radius: 18px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .hero-text {
+        flex: 1;
+        color: white;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+        margin-top: 10px;
+        width: 85%;
+    }
+
+    .hero-card {
+        width: 260px;
+        padding: 25px;
+        background: white;
+        border-radius: 18px;
+        color: #003f9e;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .hero-card img {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+
+    .hero-card h2 {
+        margin: 0;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    @media(max-width:750px){
+        .hero-section {
+            flex-direction: column;
+            text-align: center;
+        }
+        .hero-card { width: 100%; }
+        .hero-text p { width: 100%; }
+    }
+
+    /* ========== PAKET ========== */
+    .pricing-section {
+        width: 92%;
+        max-width: 1200px;
+        margin: 30px auto;
+        display: flex;
+        gap: 20px;
+    }
+
+    .price-card {
+        flex: 1;
+        background: rgba(255,255,255,0.95);
+        padding: 20px;
+        border-radius: 15px;
+        color: #003f9e;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    .price-card h3 {
+        margin: 0 0 12px 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: #003f9e;
+    }
+
+    .price-card ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .price-card .price {
+        margin-top: 12px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .buy-btn-cta {
+        display: block;
+        width: 180px;
+        margin: 18px auto;
+        padding: 10px 16px;
+        background: #003f9e;
+        color: white;
+        border-radius: 12px;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    @media(max-width:900px){
+        .pricing-section { flex-direction: column; }
+        .price-card { width: 100%; }
+    }
+
+    /* ========== SECTION BAWAH========== */
+
+    .section-wrapper {
+        width: 92%;
+        max-width: 1200px;
+        margin: 30px auto;
+        background: linear-gradient(#9cc7ff, #004ad7);
+        border-radius: 18px;
+        padding: 30px;
+        color: white;
+    }
+
+    .section-text {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .stat {
+        float: right;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .vinix-big {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        background: rgba(255,255,255,0.9);
+        color: #003f9e;
+        padding: 22px;
+        border-radius: 14px;
+        margin-top: 22px;
+    }
+
+    .vinix-big .vinix-text {
+        flex: 1;
+    }
+
+    .vinix-big h3 {
+        margin: 0 0 10px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #003f9e;
+    }
+
+    .vinix-big p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .vinix-big .vinix-img {
+    width: 100%;             /* gambar otomatis selebar container */
+    max-width: 450px;        /* batas maksimal agar tetap rapi */
+    height: auto;            /* tinggi mengikuti proporsi */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.vinix-big img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+    .read-more {
+        display: inline-block;
+        margin-top: 14px;
+        padding: 9px 18px;
+        background: #003f9e;
+        color: white;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* === REVIEW USERS === */
+    .testi-title {
+        text-align: center;
+        margin-top: 28px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .testi-row {
+        display: flex;
+        gap: 18px;
+        margin-top: 16px;
+    }
+
+    .testi {
+        flex: 1;
+        background: rgba(255,255,255,0.95);
+        color: #003f9e;
+        padding: 16px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+    }
+
+    .testi img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 8px;
+    }
+
+    .testi .name {
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    .testi .role {
+        font-size: 13px;
+        opacity: 0.9;
+        margin-bottom: 8px;
+    }
+
+    .testi .quote {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    @media(max-width:850px){
+        .testi-row { flex-direction: column; }
+    }
+
+    /* === FOOTER === */
+    .site-footer {
+        margin-top: 26px;
+        background: rgba(255,255,255,0.25);
+        padding: 18px;
+        border-radius: 12px;
+        text-align: center;
+        color: #003f9e;
+    }
+
+    .social {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .social a {
+        width: 30px;
+        height: 30px;
+        background: rgba(255,255,255,0.95);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-decoration: none;
+        color: #003f9e;
+        font-weight: bold;
+    }
+
+    .next-btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+    }
+
+    .next-btn {
+        background: #ffffff;
+        color: #004ad7;
+        padding: 12px 35px;
+        border-radius: 25px;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .next-btn:hover {
+        background: #d6e7ff;
+    }
+
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-container">
+
+        <div class="nav-logo">
+            
+            Vinix D-Ready
+        </div>
+
+        <div class="nav-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="nav-btns">
+            <a href="login.html" class="login-btn" style="text-decoration:none; color:white;">
+                Login
+            </a>
+            <a href="register.html" class="Register Now-btn" style="text-decoration:none; color:white;">
+                Register Now
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero-section">
+    <div class="hero-text">
+        <h1>Ukur Kesiapan Digital Anda bersama Vinix D-Ready</h1>
+        <p>
+            Vinix D-Ready membantu UMKM memahami tingkat kesiapan digital,
+            mengidentifikasi kekuatan, serta menemukan area yang perlu ditingkatkan.
+        </p>
+    </div>
+
+    <div class="hero-card">
+        <img src="images/vinix-dready.png" alt="Vinix dready" class="full-image">
+        <h2>VINIX<br>D-Ready</h2>
+    </div>
+</section>
+
+<div class="pricing-section">
+
+    <div class="price-card">
+        <h3>Paket Premium</h3>
+        <ul>
+            <li>Akses fitur dasar Branding digital</li>
+            <li>Cek awal kondisi usaha/layanan</li>
+            <li>Akses fitur Operasional Digital</li>
+        </ul>
+        <div class="price">Harga : Rp. 100.000/bulan</div>
+    </div>
+
+    <div class="price-card">
+        <h3>Paket Pro</h3>
+        <ul>
+            <li>Analisis lengkap kondisi usaha</li>
+            <li>Tes Assessment</li>
+            <li>Prioritas fitur Branding dan Operasional Digital</li>
+        </ul>
+        <div class="price">Harga : Rp. 150.000/bulan</div>
+    </div>
+
+    <div class="price-card">
+        <h3>Paket Exclusive</h3>
+        <ul>
+            <li>Akses semua learn fitur</li>
+            <li>Report PDF analisis</li>
+            <li>Tes Assessment</li>
+            <li>Dukungan progress prioritas</li>
+        </ul>
+        <div class="price">Harga : Rp. 200.000/bulan</div>
+    </div>
+
+</div>
+
+<div style="text-align:center; margin-top:12px;">
+    <a href="#" class="buy-btn-cta">🛒 Beli Sekarang</a>
+</div>
+
+<div class="section-wrapper">
+
+    <div class="section-text">
+        Vinix D-Ready adalah platform asesmen digital yang dirancang khusus untuk
+        membantu UMKM memahami tingkat kesiapan digital mereka secara mudah,
+        cepat, dan terstruktur.
+    </div>
+
+    <div class="vinix-big">
+        <div class="vinix-text">
+            <h3>VINIX D-Ready</h3>
+            <p>
+                Banyak pelaku UMKM ingin beralih ke ekosistem digital, namun tidak mengetahui posisi awal, kelemahan yang perlu diperbaiki, maupun langkah apa yang harus dilakukan.Di sinilah Vinix D-Ready hadir memberikan solusi.
+Melalui sistem penilaian yang mencakup branding digital, operasional digital, pemasaran online, manajemen keuangan, hingga pemanfaatan teknologi, Vinix D-Ready memberikan gambaran menyeluruh mengenai kondisi digitalisasi usaha Anda saat ini.
+            </p>
+
+            <a href="#" class="read-more">Baca Selengkapnya</a>
+        </div>
+
+        <div class="vinix-img">
+            <img src="images/vinix-dready.png" alt="Vinix dready" class="full-image">
+        </div>
+    </div>
+
+    <div class="testi-title">Apa Kata Pengguna Kami?</div>
+
+    <div class="testi-row">
+        <div class="testi">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="user1">
+            <div class="name">Rina</div>
+            <div class="role">Pemilik Olshop Fashion</div>
+            <div class="quote">"Vinix D-Ready sangat membantu meningkatkan pemasaran online usaha saya."</div>
+        </div>
+
+        <div class="testi">
+            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="user2">
+            <div class="name">Wawan Selek</div>
+            <div class="role">UMKM Kuliner</div>
+            <div class="quote">"Dengan rekomendasinya, saya jadi tahu langkah apa yang harus saya lakukan untuk meningkatkan pemasaran digital."</div>
+        </div>
+
+        <div class="testi">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="user3">
+            <div class="name">Sari</div>
+            <div class="role">Pengusaha Kerajinan</div>
+            <div class="quote">"Cocok untuk UMKM yang baru mulai go digital. Sangat direkomendasikan!."</div>
+        </div>
+    </div>
+
+    <div class="site-footer">
+        <strong>Vinix D-Ready</strong><br>
+        Digital Readiness Assessment
+        <div class="social">
+            <a href="#" title="Instagram">IG</a>
+            <a href="#" title="YouTube">YT</a>
+            <a href="#" title="Facebook">FB</a>
+            <a href="#" title="Twitter">TW</a>
+        </div>
+
+        <p style="font-size:12px; opacity:0.8; margin-top:10px;">© 2025 Vinix | Kebijakan Privasi</p>
+    </div>
+
+   
+
+</div>
+
+<script>
+    document.querySelector(".next-btn").addEventListener("click", function () {
+        window.location.href = "login.html";
+    });
+</script>
+
+</body>
+</html>

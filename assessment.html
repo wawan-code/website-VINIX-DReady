@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Page - Vinix D-Ready</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #e5e7eb;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #0d2c73;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 14px;
+            width: 88%;
+            margin: 30px auto 20px;
+        }
+
+        .navbar-left {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 15px;
+        }
+
+        .logout-btn {
+            background: #1b4ba3;
+            padding: 8px 18px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        /* HEADER */
+        .header-box {
+            width: 88%;
+            margin: auto;
+            background: #8cbcff;
+            padding: 30px;
+            border-radius: 14px;
+            color: #0d2c73;
+        }
+
+        .header-box h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .header-box p {
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        /* MAIN CONTENT */
+        .main-container {
+            width: 88%;
+            margin: 25px auto;
+            background: linear-gradient(to bottom, #4b79ff, #9cd5ff);
+            padding: 30px;
+            border-radius: 16px;
+            color: white;
+        }
+
+        .test-box {
+            background: #2656d4;
+            padding: 20px 30px;
+            border-radius: 14px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* PROGRESS */
+        .progress-bar-bg {
+            width: 100%;
+            height: 12px;
+            background: #ffffff;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .progress-bar-fill {
+            width: 20%;
+            height: 100%;
+            background: orange;
+            border-radius: 10px;
+        }
+
+        .progress-text {
+            margin-top: 6px;
+            font-size: 14px;
+        }
+
+        /* QUESTION BOX */
+        .question-box {
+            background: #2656d4;
+            padding: 20px 25px;
+            border-radius: 14px;
+            margin-top: 25px;
+        }
+
+        .question-text {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .option-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .option-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .option-list input {
+            margin-right: 10px;
+        }
+
+        /* NEXT BUTTON */
+        .next-btn {
+            background: #0d2c73;
+            padding: 12px 32px;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 25px;
+            float: right;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-left">VINIX D-Ready</div>
+
+        <div class="navbar-menu">
+            <a href="home.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <a href="login.html" class="logout-btn" style="text-decoration:none; color:white;">
+            Logout 👤
+        </a>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header-box">
+        <h1>Start Assessment</h1>
+        <p>Jawablah pertanyaan berikut untuk menilai tingkat kesiapan digital bisnis anda</p>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-container">
+
+        <div class="test-box">
+            🔍 <b>Assessment Test</b><br>
+            Terdiri dari 10 pertanyaan – waktu pengerjaan &lt; 10 menit
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill"></div>
+        </div>
+        <div class="progress-text">Progres 2 / 10</div>
+
+        <!-- QUESTION 1 -->
+        <div class="question-box">
+            <div class="question-text">
+                <b>1.</b> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                eiusmod tempor incididunt ut labore et dolore magna aliqua..."
+            </div>
+
+            <ul class="option-list">
+                <li><input type="radio" name="q1"> lorem ipsum</li>
+                <li><input type="radio" name="q1"> lorem ipsum</li>
+                <li><input type="radio" name="q1"> lorem ipsum</li>
+                <li><input type="radio" name="q1"> lorem ipsum</li>
+            </ul>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="question-box">
+            <div class="question-text">
+                <b>2.</b> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                eiusmod tempor incididunt ut labore et dolore magna aliqua..."
+            </div>
+
+            <ul class="option-list">
+                <li><input type="radio" name="q2"> lorem ipsum</li>
+                <li><input type="radio" name="q2"> lorem ipsum</li>
+                <li><input type="radio" name="q2"> lorem ipsum</li>
+                <li><input type="radio" name="q2"> lorem ipsum</li>
+            </ul>
+        </div>
+
+        <!-- NEXT BUTTON -->
+        <a href="learn_features.html" class="next-btn">Next</a>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login | Vinix D-Ready</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(#9cc7ff, #004ad7);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-container {
+        width: 380px;
+        background: rgba(255,255,255,0.25);
+        backdrop-filter: blur(5px);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        text-align: center;
+        color: white;
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        opacity: 0.9;
+        margin-bottom: 25px;
+    }
+
+    .input-group {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .input-group label {
+        font-size: 13px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        background: rgba(255,255,255,0.8);
+        font-size: 14px;
+    }
+
+    .login-btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background: #003a92;
+        color: white;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.2s;
+    }
+
+    .login-btn:hover {
+        background: #002766;
+    }
+
+    .register-text {
+        margin-top: 20px;
+        font-size: 13px;
+    }
+
+    .register-text a {
+        color: #f2f2f2;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+</style>
+
+</head>
+<body>
+
+<div class="login-container">
+    <div class="title">Vinix D-Ready</div>
+    <div class="subtitle">Masuk ke akun Anda untuk melanjutkan</div>
+
+    <div class="input-group">
+        <label>Email</label>
+        <input type="email" placeholder="Masukkan email" required>
+    </div>
+
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" placeholder="Masukkan password" required>
+    </div>
+
+    <!-- Tombol login diarahkan ke halaman register -->
+    <button class="login-btn" onclick="window.location.href='register.html'">Login</button>
+
+    <div class="register-text">
+        Belum punya akun? <a href="register.html">Daftar di sini</a>
+    </div>
+</div>
+
+</body>
+</html>

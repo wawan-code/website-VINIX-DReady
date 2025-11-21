@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - VINIX D-Ready</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f2f2f2;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 1100px;
+            margin: 30px auto;
+            background: linear-gradient(to bottom right, #1c4cd6, #d7e7ff);
+            border-radius: 20px;
+            padding-bottom: 70px;
+        }
+
+        /* Header area */
+        .header-box {
+            background: #a9d3ff;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0e2a6d;
+            padding: 12px 20px;
+            border-radius: 50px;
+            color: white;
+        }
+
+        .nav-menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+        }
+
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+
+        .logout-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #1f4fbf;
+            padding: 8px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        /* Title */
+        h1 {
+            color: white;
+            font-size: 32px;
+            margin-left: 40px;
+            margin-top: 25px;
+        }
+
+        .desc {
+            color: white;
+            margin-left: 40px;
+            font-size: 15px;
+            line-height: 22px;
+            max-width: 600px;
+        }
+
+        /* Card History */
+        .card {
+            background: rgba(255, 255, 255, 0.4);
+            width: 60%;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .history-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 15px;
+            margin: 8px 0;
+        }
+
+        .history-item i {
+            font-size: 18px;
+        }
+
+        .btn {
+            margin-top: 15px;
+            background: #0e2a6d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #1b4be0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="header-box">
+        <div class="navbar">
+            <div class="logo">VINIX D-Ready</div>
+
+            <div class="nav-menu">
+                <a href="home.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+            <a href="login.html" class="logout-btn" style="text-decoration:none; color:white;">
+                Logout 👤
+            </a>
+        </div>
+
+        <h1>History</h1>
+        <p class="desc">
+            Lihat riwayat digital yang telah anda lakukan.  
+            Setiap assessment mencatat skor, level digital,  
+            dan perkembangan dari waktu ke waktu.
+        </p>
+    </div>
+
+    <!-- CARD HISTORY -->
+    <div class="card">
+        <div class="card-title">Card History :</div>
+
+        <div class="history-item">
+            <i class="bi bi-check-circle-fill"></i> Assessment - 15 Nov 2025
+        </div>
+
+        <div class="history-item">
+            <i class="bi bi-check-circle-fill"></i> Skor : 70%
+        </div>
+
+        <div class="history-item">
+            <i class="bi bi-check-circle-fill"></i> Level : Stabil Digital
+        </div>
+
+        <a class="btn" href="#">Lihat Detail</a>
+    </div>
+
+    <!-- URAIAN HISTORY -->
+    <div class="card">
+        <div class="card-title">Uraian History</div>
+
+        <p style="color: white; font-size: 15px;">
+            “Perkembangan digital Anda meningkat stabil dari awal hingga sekarang”
+        </p>
+
+        <a class="btn" href="#">Mulai Assessment Baru</a>
+    </div>
+
+</div>
+
+</body>
+</html>

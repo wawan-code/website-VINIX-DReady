@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress - VINIX D-Ready</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #4c7fd1, #b5d7ff);
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px 40px;
+        }
+
+        /* NAVBAR STYLE */
+        .navbar {
+            background: #0a2d82;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 12px;
+            color: white;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        .menu a:hover {
+            opacity: 0.8;
+        }
+
+        .logout-btn {
+            background: #1c4db3;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* CONTENT */
+        .content {
+            padding: 30px 10px;
+        }
+
+        /* PROGRESS BOX */
+        .progress-card {
+            background: #78b7ff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 70%;
+        }
+
+        .sub {
+            margin-top: -10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #ffa321;
+            border-radius: 10px;
+        }
+
+        .percent {
+            font-weight: bold;
+            float: right;
+            margin-right: 10px;
+        }
+
+        /* CHECKLIST BOX */
+        .checklist-card {
+            background: rgba(255, 255, 255, 0.35);
+            width: 40%;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .checklist-card .item {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .green {
+            background: #21d152;
+        }
+
+        .white {
+            background: white;
+        }
+
+        /* ACTION CARD */
+        .action-card {
+            background: rgba(255, 255, 255, 0.35);
+            width: 40%;
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .blue {
+            background: #1b47d1;
+            color: white;
+        }
+
+        /* NEXT BUTTON */
+        .next-wrapper {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .next-btn {
+            background: #0a2d82;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .next-btn:hover {
+            background: #083072;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="logo">VINIX D-Ready</div>
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="learn_features.html">Features</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="login.html" class="logout-btn" style="text-decoration:none; color:white;">
+                Logout 👤
+            </a>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+
+            <!-- PROGRESS -->
+            <div class="progress-card">
+                <h2>Progress</h2>
+                <p class="sub">Kesiapan Digital</p>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:40%;"></div>
+                </div>
+
+                <span class="percent">40 %</span>
+            </div>
+
+            <!-- CHECKLIST -->
+            <div class="checklist-card">
+                <h3>Checklist</h3>
+
+                <div class="item">
+                    <span class="dot green"></span>
+                    Analisis kesiapan digital
+                </div>
+
+                <div class="item">
+                    <span class="dot green"></span>
+                    Manajemen SDM
+                </div>
+
+                <div class="item">
+                    <span class="dot white"></span>
+                    Terintegrasi dengan platform digital
+                </div>
+            </div>
+
+            <!-- ACTION BUTTONS -->
+            <div class="action-card">
+                <h3>Tindakan Lanjut</h3>
+
+                <button class="btn blue">Mulai Perbaikan</button>
+                <button class="btn blue">Pelajari Materi Terkait</button>
+            </div>
+
+            <!-- NEXT BUTTON -->
+            <div class="next-wrapper">
+                <a href="history.html" class="next-btn">Next →</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
